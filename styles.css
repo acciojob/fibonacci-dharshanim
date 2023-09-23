@@ -1,1 +1,16 @@
 /*  your css code here. If applicable */
+function fibonacci(num){
+	return fibi(num-1);
+	
+}
+function fibi(n){
+	if(n <= 0)
+	return 0;
+	return recursive(n-1,0,1);
+}
+function recursive(n,prev,curr){
+	if(n==0)
+	return curr;
+	return recursive(n-1,curr,curr+prev);
+}
+module.exports = fibonacci;
